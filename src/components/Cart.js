@@ -45,6 +45,11 @@ const Cart = ({ title }) => {
     setItemsState(result)
   }
 
+  const buyIt = () => {
+    setItemsState([])
+    return cartItems.splice(0, cartItems.length)
+  }
+
   if (itemsState.length > 0) {
     return (
       <div className="cart">
@@ -57,7 +62,7 @@ const Cart = ({ title }) => {
             <div className="cart-content-container" key={obj.id}>
               <div className="name-price-container">
                 <h3 className="item-name">{obj.targetItem.name}</h3>
-                <h3 className="item-price ">
+                <h3 className="item-price-cart">
                   ${obj.targetItem.price * obj.itemQuantity}
                 </h3>
               </div>
@@ -76,7 +81,11 @@ const Cart = ({ title }) => {
         })}
         <hr className="hr" />
         <h3 className="total">Total: ${itemsPrice}</h3>
-        <Button className="shop-button" title="Checkout" />
+        <Button
+          className="shop-button cart-button"
+          title="Checkout"
+          onClick={buyIt}
+        />
       </div>
     )
   } else {

@@ -45,13 +45,12 @@
   line-height: 22px;
 }
 
-.item-price {
+.item-price-cart {
   margin: 0;
   padding: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 22px;
 }
 
 .item-quantity {
@@ -98,4 +97,8 @@
 .empty-message {
   margin: 16px 35px;
   align-self: center;
+}
+
+.cart-button {
+  margin: 16px 35px;
 }
