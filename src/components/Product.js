@@ -6,7 +6,8 @@ import { mainCategory, cartItems } from '../index'
 import Navbar from './Navbar'
 import ProductCount from './ProductCount'
 import Button from './Button'
-import uniqid from 'uniqid'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Product = ({ match }) => {
   const [itemQuantity, setItemQuantity] = useState(1)
@@ -41,9 +42,18 @@ const Product = ({ match }) => {
     id: newId,
   }
 
+  toast.configure()
+
+  const notify = () => {
+    toast.success(`${targetItem.name} added to cart.`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    })
+  }
+
   const isData = cartItems.find((x) => x === data)
 
   const cartUpdate = () => {
+    notify()
     data.id = data.id + 1
     return !isData ? cartItems.push(data) : null
   }

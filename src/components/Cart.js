@@ -5,6 +5,8 @@ import Button from './Button'
 import { cartItems } from '../index'
 import { useState, useEffect } from 'react'
 import remove from '../assets/icons/remove.svg'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Cart = ({ title }) => {
   const [itemsState, setItemsState] = useState([])
@@ -45,7 +47,14 @@ const Cart = ({ title }) => {
     setItemsState(result)
   }
 
+  toast.configure()
+
+  const notify = () => {
+    toast.success('Notification', { position: toast.POSITION.BOTTOM_RIGHT })
+  }
+
   const buyIt = () => {
+    notify()
     setItemsState([])
     return cartItems.splice(0, cartItems.length)
   }
