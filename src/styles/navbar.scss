@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 35px 8px 35px;
+}
+
+.navbar-header {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-list li {
+  padding: 0 16px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbar-list li:last-child {
+  padding-right: 0 !important;
+  cursor: pointer;
+}

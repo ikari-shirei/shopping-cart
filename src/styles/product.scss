@@ -1,0 +1,22 @@
+.product-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-description {
+  margin: 0 35px;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 50%;
+}
+
+.product-quantity-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-to-cart-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 35px;
+}

@@ -1,0 +1,101 @@
+@import './index.scss';
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-header-container {
+  margin: 0;
+  padding: 4px 35px;
+  background-color: $blue;
+  color: $white;
+}
+
+.cart-header {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 16px 35px;
+  margin-bottom: 0;
+}
+
+.item-name {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.item-price {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  margin-left: 16px;
+  padding: 0;
+  color: $white;
+  background-color: $blue;
+}
+
+.remove-quantity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 35px;
+  margin-bottom: 0;
+}
+
+.remove-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.total {
+  margin: 0 35px;
+}
+
+.hr {
+  color: $blue;
+  margin: 16px 35px;
+}
+
+.empty-message {
+  margin: 16px 35px;
+  align-self: center;
+}

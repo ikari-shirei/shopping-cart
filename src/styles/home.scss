@@ -1,0 +1,36 @@
+@import './index.scss';
+.home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-content-container {
+  display: flex;
+  height: 100vh;
+  background-color: $blue;
+  background-image: url('../assets/images/sonnie-hiles.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.home-content {
+  position: relative;
+  left: 2rem;
+  top: 4rem;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.home-content-header {
+  font-family: Advent Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 29px;
+  color: $blue;
+}

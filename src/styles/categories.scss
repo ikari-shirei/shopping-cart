@@ -1,0 +1,44 @@
+@import './index.scss';
+
+.categories-header-container {
+  margin: 0;
+  padding: 4px 35px;
+  background-color: $blue;
+  color: $white;
+}
+
+.categories-header {
+  margin: 0;
+}
+
+.categories-content-container {
+  margin: 0 35px;
+  margin-top: 16px;
+}
+
+.categories-subheader {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.categories-ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 29px;
+  margin: 8px 0;
+  li {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 4px;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
