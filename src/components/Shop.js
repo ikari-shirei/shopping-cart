@@ -47,6 +47,26 @@ const Shop = ({ match }) => {
 
   const targetArray = filter.length > 0 ? filter : category
 
+  const isCategory = !(category.length === 0)
+
+  const iterateItems = targetArray.map((item) => {
+    return (
+      <Link
+        to={`/categories/${match.params.category}/${item.id}`}
+        key={item.id}
+        prototype={item}
+      >
+        <Card item={item} key={item.id} />
+      </Link>
+    )
+  })
+
+  const noItemMessage = (
+    <h3 className="no-item-message">There is no item in this category.</h3>
+  )
+
+  const result = isCategory ? iterateItems : noItemMessage
+
   return (
     <div>
       <Navbar />
@@ -54,23 +74,7 @@ const Shop = ({ match }) => {
       <div className="categories-header-container">
         <h2 className="categories-header">{categoryName}</h2>
       </div>
-      <div className="cards-container">
-        {targetArray.map((item) => {
-          if (category === [] || !category) {
-            return <h1>There is no item.</h1>
-          } else {
-            return (
-              <Link
-                to={`/categories/${match.params.category}/${item.id}`}
-                key={item.id}
-                prototype={item}
-              >
-                <Card item={item} key={item.id} />
-              </Link>
-            )
-          }
-        })}
-      </div>
+      <div className="cards-container">{result}</div>
     </div>
   )
 }
