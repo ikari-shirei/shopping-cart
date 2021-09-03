@@ -3,7 +3,20 @@ import ReactDOM from 'react-dom'
 import './styles/index.scss'
 import Routes from './Routes'
 import uniqid from 'uniqid'
-import redDress from './assets/images/red-dress.png'
+import {
+  dress1,
+  dress2,
+  dress3,
+  dress4,
+  dress5,
+  dress6,
+  bag1,
+  bag2,
+  hoodie1,
+  hoodie2,
+  sunglass1,
+  sunglass2,
+} from './importImg'
 
 /*  
 I needed global variable, so I couldn't use state,
@@ -16,60 +29,60 @@ export const mainCategory = [
     id: uniqid(),
     items: [
       {
-        name: 'Red Dress 1',
-        brand: 'Brand',
+        name: 'Dress 1',
+        brand: 'Dress Factory',
         price: '2.00',
-        img: redDress,
+        img: dress1,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '1',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Dress 2',
-        brand: 'Brand',
+        name: 'Dress 2',
+        brand: 'Dress Factory',
         price: '3.00',
-        img: redDress,
+        img: dress2,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '2',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Dress 3',
-        brand: 'Brand',
+        name: 'Dress 3',
+        brand: 'Dress Company',
         price: '3.00',
-        img: redDress,
+        img: dress3,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '3',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Dress 4',
-        brand: 'Brand',
+        name: 'Dress 4',
+        brand: 'Dress Factory',
         price: '3.00',
-        img: redDress,
+        img: dress4,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '4',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Dress 5',
-        brand: 'Brand',
+        name: 'Dress 5',
+        brand: 'Dress Company',
         price: '3.00',
-        img: redDress,
+        img: dress5,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '5',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Dress 6',
-        brand: 'Brand',
+        name: 'Dress 6',
+        brand: 'Dress Factory',
         price: '3.00',
-        img: redDress,
+        img: dress6,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '6',
@@ -82,20 +95,20 @@ export const mainCategory = [
     id: uniqid(),
     items: [
       {
-        name: 'Red Hoodie 1',
-        brand: 'Brand',
+        name: 'Hoodie 1',
+        brand: 'Hoodie Company',
         price: '4.00',
-        img: redDress,
+        img: hoodie1,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '1',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Hoodie 2',
-        brand: 'Brand',
+        name: 'Hoodie 2',
+        brand: 'Hoodie Factory',
         price: '24.00',
-        img: redDress,
+        img: hoodie2,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '2',
@@ -113,20 +126,20 @@ export const mainCategory = [
     id: uniqid(),
     items: [
       {
-        name: 'Red Bag 1',
-        brand: 'Brand',
+        name: 'Blue Bag',
+        brand: 'Blueos',
         price: '2.00',
-        img: redDress,
+        img: bag1,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '1',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Bag 2',
-        brand: 'Brand',
+        name: 'Red Bag',
+        brand: 'Redos',
         price: '3.00',
-        img: redDress,
+        img: bag2,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '2',
@@ -139,20 +152,20 @@ export const mainCategory = [
     id: uniqid(),
     items: [
       {
-        name: 'Red Sunglass 1',
-        brand: 'Brand',
+        name: 'Sunglass 1',
+        brand: 'Sunglass Company',
         price: '2.00',
-        img: redDress,
+        img: sunglass1,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '1',
         uniqid: uniqid(),
       },
       {
-        name: 'Red Sunglass 2',
-        brand: 'Brand',
+        name: 'Sunglass 2',
+        brand: 'Sunglass Factory',
         price: '3.00',
-        img: redDress,
+        img: sunglass2,
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         id: '2',
