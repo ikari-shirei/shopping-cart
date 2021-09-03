@@ -4,10 +4,6 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-  const handleButton = () => {
-    console.log('clicked')
-  }
-
   return (
     <div className="home">
       <Navbar />
@@ -15,11 +11,7 @@ const Home = () => {
         <div className="home-content">
           <h3 className="home-content-header">Find yourself</h3>
           <Link to="/categories">
-            <Button
-              title="Shop Now"
-              className="shop-button"
-              onClick={handleButton}
-            />
+            <Button title="Shop Now" className="shop-button" />
           </Link>
         </div>
       </div>

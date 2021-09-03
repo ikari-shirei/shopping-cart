@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import uniqid from 'uniqid'
 import { mainCategory } from '../index'
 import '../styles/shop.scss'
 import Card from './Card'
@@ -41,7 +40,6 @@ const Shop = ({ match }) => {
       return item.name.toLowerCase().includes(value.toLowerCase())
     })
 
-    console.log(filteredItems)
     setFilter(filteredItems)
   }
 

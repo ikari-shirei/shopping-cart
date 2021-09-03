@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Card from './Card'
 import '../styles/product.scss'
@@ -26,8 +25,6 @@ const Product = ({ match }) => {
   const targetObj = mainCategory.find((category) =>
     category.name === match.params.category ? category : null
   )
-
-  console.log(targetObj)
 
   const targetItem = targetObj.items.find((item) =>
     item.id === match.params.id ? item : null
@@ -57,9 +54,6 @@ const Product = ({ match }) => {
     data.id = data.id + 1
     return !isData ? cartItems.push(data) : null
   }
-
-  console.log(targetItem)
-  console.log(match.params.id)
 
   return (
     <div>

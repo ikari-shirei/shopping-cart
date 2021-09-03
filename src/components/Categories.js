@@ -1,8 +1,6 @@
 import '../styles/categories.scss'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import uniqid from 'uniqid'
 import { listItems } from '../index'
 
 const Categories = () => {

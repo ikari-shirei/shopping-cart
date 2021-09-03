@@ -152,8 +152,8 @@ export const mainCategory = [
     id: uniqid(),
     items: [
       {
-        name: 'Sunglass 1',
-        brand: 'Sunglass Company',
+        name: 'Sunglasses 1',
+        brand: 'Sunglasses Company',
         price: '2.00',
         img: sunglass1,
         description:
@@ -162,8 +162,8 @@ export const mainCategory = [
         uniqid: uniqid(),
       },
       {
-        name: 'Sunglass 2',
-        brand: 'Sunglass Factory',
+        name: 'Sunglasses 2',
+        brand: 'Sunglasses Factory',
         price: '3.00',
         img: sunglass2,
         description:

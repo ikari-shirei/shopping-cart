@@ -30,9 +30,6 @@ const Cart = ({ title }) => {
   useEffect(updateItemsState, [])
   useEffect(updateItemsPrice, [itemsState])
 
-  console.log(itemsState)
-  console.log(itemsPrice)
-
   const removeItem = (event) => {
     const removedItem = itemsState.find((obj) => {
       return obj.targetItem.uniqid === event.target.parentNode.id
@@ -55,7 +52,7 @@ const Cart = ({ title }) => {
     })
   }
 
-  const buyIt = () => {
+  const handleCheckout = () => {
     notify()
     setItemsState([])
     return cartItems.splice(0, cartItems.length)
@@ -91,13 +88,12 @@ const Cart = ({ title }) => {
               </div>
             )
           })}
-
           <hr className="hr" />
           <h3 className="total">Total: ${itemsPrice}</h3>
           <Button
             className="shop-button cart-button"
             title="Checkout"
-            onClick={buyIt}
+            onClick={handleCheckout}
           />
         </div>
       </div>

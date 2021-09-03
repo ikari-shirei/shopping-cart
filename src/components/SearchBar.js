@@ -1,5 +1,4 @@
 import '../styles/search-bar.scss'
-import searchIcon from '../assets/icons/search.svg'
 
 const SearchBar = ({ value, onChange }) => {
   return (
