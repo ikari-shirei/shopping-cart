@@ -62,25 +62,29 @@ const Product = ({ match }) => {
   console.log(match.params.id)
 
   return (
-    <div className="product">
+    <div>
       <Navbar />
-      <div className="product-content">
-        <Card item={targetItem} key={targetItem.id} />
-        <p className="product-description">{targetItem.description}</p>
-      </div>
-      <div className="product-quantity-container">
-        <ProductCount
-          quantity={itemQuantity}
-          decreaseOnClick={decreaseOnClick}
-          increaseOnClick={increaseOnClick}
-        />
-      </div>
-      <div className="add-to-cart-button-container">
-        <Button
-          title="Add to Cart"
-          className="add-to-cart-button"
-          onClick={cartUpdate}
-        />
+      <div className="product">
+        <div className="product-content">
+          <Card item={targetItem} key={targetItem.id} />
+          <p className="product-description">{targetItem.description}</p>
+        </div>
+        <div className="product-bottom">
+          <div className="product-quantity-container">
+            <ProductCount
+              quantity={itemQuantity}
+              decreaseOnClick={decreaseOnClick}
+              increaseOnClick={increaseOnClick}
+            />
+          </div>
+          <div className="add-to-cart-button-container">
+            <Button
+              title="Add to Cart"
+              className="add-to-cart-button"
+              onClick={cartUpdate}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -50,7 +50,9 @@ const Cart = ({ title }) => {
   toast.configure()
 
   const notify = () => {
-    toast.success('Notification', { position: toast.POSITION.BOTTOM_RIGHT })
+    toast.success('Your order is confirmed.', {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    })
   }
 
   const buyIt = () => {
@@ -66,35 +68,38 @@ const Cart = ({ title }) => {
         <div className="cart-header-container">
           <h3 className="cart-header">Cart</h3>
         </div>
-        {itemsState.map((obj) => {
-          return (
-            <div className="cart-content-container" key={obj.id}>
-              <div className="name-price-container">
-                <h3 className="item-name">{obj.targetItem.name}</h3>
-                <h3 className="item-price-cart">
-                  ${obj.targetItem.price * obj.itemQuantity}
-                </h3>
+        <div className="cart-main">
+          {itemsState.map((obj) => {
+            return (
+              <div className="cart-content-container" key={obj.id}>
+                <div className="name-price-container">
+                  <h3 className="item-name">{obj.targetItem.name}</h3>
+                  <h3 className="item-price-cart">
+                    ${obj.targetItem.price * obj.itemQuantity}
+                  </h3>
+                </div>
+                <div className="remove-quantity-container">
+                  <button
+                    className="remove-item"
+                    id={obj.targetItem.uniqid}
+                    onClick={removeItem}
+                  >
+                    <img src={remove} alt="Remove icon" />
+                  </button>
+                  <h3 className="item-quantity">{obj.itemQuantity}</h3>
+                </div>
               </div>
-              <div className="remove-quantity-container">
-                <button
-                  className="remove-item"
-                  id={obj.targetItem.uniqid}
-                  onClick={removeItem}
-                >
-                  <img src={remove} alt="Remove icon" />
-                </button>
-                <h3 className="item-quantity">{obj.itemQuantity}</h3>
-              </div>
-            </div>
-          )
-        })}
-        <hr className="hr" />
-        <h3 className="total">Total: ${itemsPrice}</h3>
-        <Button
-          className="shop-button cart-button"
-          title="Checkout"
-          onClick={buyIt}
-        />
+            )
+          })}
+
+          <hr className="hr" />
+          <h3 className="total">Total: ${itemsPrice}</h3>
+          <Button
+            className="shop-button cart-button"
+            title="Checkout"
+            onClick={buyIt}
+          />
+        </div>
       </div>
     )
   } else {

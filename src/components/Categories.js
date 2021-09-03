@@ -12,7 +12,7 @@ const Categories = () => {
       <div className="categories-header-container">
         <h2 className="categories-header">Categories</h2>
       </div>
-      <div>
+      <div className="categories-main">
         <div className="categories-content-container">
           {listItems.map((mainCat) => {
             return (
