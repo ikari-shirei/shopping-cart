@@ -11,6 +11,10 @@ import 'react-toastify/dist/ReactToastify.css'
 const Product = ({ match }) => {
   const [itemQuantity, setItemQuantity] = useState(1)
 
+  const newId =
+    cartItems.length > 0 ? cartItems[cartItems.length - 1].id + 1 : 1
+  const [dataId, setDataId] = useState(newId)
+
   const decreaseOnClick = () => {
     if (itemQuantity > 1) {
       setItemQuantity(itemQuantity - 1)
@@ -30,14 +34,13 @@ const Product = ({ match }) => {
     item.id === match.params.id ? item : null
   )
 
-  const newId =
-    cartItems.length > 0 ? cartItems[cartItems.length - 1].id + 1 : 1
-
   const data = {
     targetItem: targetItem,
     itemQuantity: itemQuantity,
     id: newId,
   }
+
+  const isData = !cartItems.find((x) => x === data)
 
   toast.configure()
 
@@ -47,12 +50,12 @@ const Product = ({ match }) => {
     })
   }
 
-  const isData = cartItems.find((x) => x === data)
-
   const cartUpdate = () => {
     notify()
-    data.id = data.id + 1
-    return !isData ? cartItems.push(data) : null
+    data.id = dataId
+    setDataId(dataId + 1)
+
+    return isData ? cartItems.push(data) : null
   }
 
   return (

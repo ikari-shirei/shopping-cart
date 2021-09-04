@@ -55,6 +55,7 @@ const Cart = ({ title }) => {
   const handleCheckout = () => {
     notify()
     setItemsState([])
+
     return cartItems.splice(0, cartItems.length)
   }
 
@@ -78,10 +79,14 @@ const Cart = ({ title }) => {
                 <div className="remove-quantity-container">
                   <button
                     className="remove-item"
-                    id={obj.targetItem.uniqid}
+                    id={obj.targetItem.uniqid + 1}
                     onClick={removeItem}
                   >
-                    <img src={remove} alt="Remove icon" />
+                    <img
+                      src={remove}
+                      alt="Remove icon"
+                      id={obj.targetItem.uniqid}
+                    />
                   </button>
                   <h3 className="item-quantity">{obj.itemQuantity}</h3>
                 </div>
