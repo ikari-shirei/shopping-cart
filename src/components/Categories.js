@@ -21,7 +21,7 @@ const Categories = () => {
                     return (
                       <li key={items.id}>
                         <Link
-                          to={`/categories/${items.category.toLowerCase()}`}
+                          to={`/shopping-cart/categories/${items.category.toLowerCase()}`}
                         >
                           {items.category}
                         </Link>

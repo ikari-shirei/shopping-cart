@@ -10,12 +10,20 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
+        {/*   <Route path="/" exact component={Home} /> */}
         <Route path="/shopping-cart" exact component={Home} />
-        <Route path="/cart" exact component={Cart} />
-        <Route path="/categories" exact component={Categories} />
-        <Route path="/categories/:category" exact component={Shop} />
-        <Route path="/categories/:category/:id" exact component={Product} />
+        <Route path="/shopping-cart/cart" exact component={Cart} />
+        <Route path="/shopping-cart/categories" exact component={Categories} />
+        <Route
+          path="/shopping-cart/categories/:category"
+          exact
+          component={Shop}
+        />
+        <Route
+          path="/shopping-cart/categories/:category/:id"
+          exact
+          component={Product}
+        />
       </Switch>
     </BrowserRouter>
   )

@@ -52,7 +52,7 @@ const Shop = ({ match }) => {
   const iterateItems = targetArray.map((item) => {
     return (
       <Link
-        to={`/categories/${match.params.category}/${item.id}`}
+        to={`/shopping-cart/categories/${match.params.category}/${item.id}`}
         key={item.id}
         prototype={item}
       >
